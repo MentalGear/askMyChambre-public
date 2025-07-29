@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="Democracy_in_action.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="5082"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="table_metadata" custom_title="0" dock_id="3" table="4,14:maintable_metadata"/><dock_state state="000000ff00000000fd0000000100000002000005b00000038ffc0100000003fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000000005b00000013500ffffff0000029c0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="etat_travaux" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="50"/><column index="2" value="287"/><column index="3" value="271"/><column index="4" value="300"/><column index="5" value="63"/><column index="6" value="39"/><column index="7" value="41"/><column index="8" value="71"/><column index="9" value="71"/><column index="10" value="73"/><column index="11" value="71"/><column index="12" value="71"/><column index="13" value="71"/><column index="14" value="71"/><column index="15" value="99"/><column index="16" value="73"/><column index="17" value="71"/><column index="18" value="71"/><column index="19" value="71"/><column index="20" value="71"/><column index="21" value="71"/><column index="22" value="71"/><column index="23" value="78"/><column index="24" value="79"/><column index="25" value="94"/><column index="26" value="95"/><column index="27" value="71"/><column index="28" value="71"/><column index="29" value="47"/><column index="30" value="300"/><column index="31" value="63"/><column index="32" value="175"/><column index="33" value="52"/><column index="34" value="71"/><column index="35" value="56"/><column index="36" value="159"/><column index="37" value="73"/><column index="38" value="67"/><column index="39" value="57"/><column index="40" value="71"/><column index="41" value="87"/><column index="42" value="70"/><column index="43" value="300"/><column index="44" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="interventions_seances_plenieres" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="263"/><column index="2" value="93"/><column index="3" value="110"/><column index="4" value="89"/><column index="5" value="151"/><column index="6" value="87"/><column index="7" value="111"/><column index="8" value="88"/><column index="9" value="300"/><column index="10" value="300"/><column index="11" value="113"/><column index="12" value="86"/><column index="13" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="petition" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="89"/><column index="2" value="87"/><column index="3" value="300"/><column index="4" value="35"/><column index="5" value="223"/><column index="6" value="300"/><column index="7" value="300"/><column index="8" value="128"/><column index="9" value="300"/><column index="10" value="138"/><column index="11" value="107"/><column index="12" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="presence_seance_publique" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="136"/><column index="2" value="108"/><column index="3" value="159"/><column index="4" value="175"/><column index="5" value="127"/><column index="6" value="89"/><column index="7" value="151"/><column index="8" value="87"/><column index="9" value="113"/><column index="10" value="111"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="question_parlementaire" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="117"/><column index="2" value="98"/><column index="3" value="167"/><column index="4" value="136"/><column index="5" value="108"/><column index="6" value="155"/><column index="7" value="178"/><column index="8" value="199"/><column index="9" value="171"/><column index="10" value="155"/><column index="11" value="119"/><column index="12" value="300"/><column index="13" value="300"/><column index="14" value="300"/><column index="15" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="table_metadata" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="255"/><column index="2" value="35"/><column index="3" value="223"/><column index="4" value="63"/><column index="5" value="527"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="votes" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="159"/><column index="2" value="231"/><column index="3" value="89"/><column index="4" value="151"/><column index="5" value="87"/><column index="6" value="113"/><column index="7" value="111"/><column index="8" value="111"/><column index="9" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">--list of all the tables
+SELECT *
+FROM sqlite_master
+WHERE type = 'table';
+
+--create the metadata table
+CREATE TABLE table_metadata (
+    table_name TEXT,
+    cid INTEGER,
+    name TEXT,
+    type TEXT,
+    is_notnull INTEGER,
+    dflt_value TEXT,
+    pk INTEGER
+);
+
+--insert the schema inside of the table created above
+INSERT INTO table_metadata SELECT 'question_parlementaire', cid, name, type, 'notnull', dflt_value, pk FROM pragma_table_info('question_parlementaire');
+INSERT INTO table_metadata SELECT 'etat_travaux', cid, name, type, 'notnull', dflt_value, pk FROM pragma_table_info('etat_travaux');
+INSERT INTO table_metadata SELECT 'petition', cid, name, type, 'notnull', dflt_value, pk FROM pragma_table_info('petition');
+INSERT INTO table_metadata SELECT 'presence_seance_publique', cid, name, type, 'notnull', dflt_value, pk FROM pragma_table_info('presence_seance_publique');
+INSERT INTO table_metadata SELECT 'interventions_seances_plenieres', cid, name, type, 'notnull', dflt_value, pk FROM pragma_table_info('interventions_seances_plenieres');
+INSERT INTO table_metadata SELECT 'votes', cid, name, type, 'notnull', dflt_value, pk FROM pragma_table_info('votes');
+
+SELECT * FROM table_metadata
+
+--drop the unused tables
+ALTER TABLE table_metadata DROP COLUMN is_notnull;
+ALTER TABLE table_metadata DROP COLUMN dflt_value;
+ALTER TABLE table_metadata DROP COLUMN pk;
+
+--update the values of the 'etat_travaux' table, column 'nature'
+UPDATE etat_travaux
+SET nature = CASE nature
+    WHEN 'PL' THEN 'ProjetDeLoi'
+    WHEN 'PPL' THEN 'PropositionDeLoi'
+    WHEN 'PRGD' THEN 'ProjetDeReglementGrandDucal'
+    WHEN 'PRREG' THEN 'PropositionDeRevisionReglementCHD'
+    WHEN 'PRCONS' THEN 'PropositionDeRevisionConstitution'
+    WHEN 'DO' THEN 'DebatOrientation'
+    WHEN 'RAC' THEN 'RapportsActivites'
+    WHEN 'CSI' THEN 'ComptesDuServiceInterieur'
+    ELSE nature  -- conserve la valeur actuelle si aucune correspondance
+END;
+
+UPDATE etat_travaux
+SET nature = CASE nature
+    WHEN 'ProjetDeLoi' THEN 'Projet De Loi'
+    WHEN 'PropositionDeLoi' THEN 'Proposition De Loi'
+    WHEN 'ProjetDeReglementGrandDucal' THEN 'Projet De Reglement Grand Ducal'
+    WHEN 'PropositionDeRevisionReglementCHD' THEN 'Proposition De Revision Reglement CHD'
+    WHEN 'PropositionDeRevisionConstitution' THEN 'Proposition De Revision Constitution'
+    WHEN 'DebatOrientation' THEN 'Debat Orientation'
+    WHEN 'RapportsActivites' THEN 'Rapports Activites'
+    WHEN 'ComptesDuServiceInterieur' THEN 'Comptes Du Service Interieur'
+    ELSE nature
+END;
+
+
+--add a column to the metadata TABLE
+ALTER TABLE table_metadata ADD COLUMN description TEXT;
+
+UPDATE table_metadata SET description = CASE
+    WHEN name = 'Dossier' THEN 'N° DU DOSSIER'
+    WHEN name = 'Adresse' THEN 'Adresse web du dossier'
+    WHEN name = 'Nature' THEN 'NATURE DU DOSSIER'
+    WHEN name = 'Relatif à' THEN 'INTITULÉ DU DOSSIER'
+    WHEN name = 'Etat' THEN 'ETAT DU DOSSIER'
+    WHEN name = 'EUR' THEN 'CE DOSSIER TRANSPOSE UNE DIRECTIVE EUROPÉENNE'
+    WHEN name = '-' THEN 'TEXTE CONSOLIDÉ CONTENANT LE DÉPÔT ET L''ENSEMBLE DES PV DES RÉUNIONS ET AVIS DISPONIBLES'
+    WHEN name = 'Dépôt' THEN 'DATE DE DÉPÔT'
+    WHEN name = 'Recev?' THEN 'DATE À LAQUELLE LE DOSSIER A ÉTÉ JUGÉ RECEVABLE'
+    WHEN name = 'RenvComm' THEN 'DATE DE RENVOI EN COMMISSION'
+    WHEN name = '1erAvisCE' THEN 'DATE DU 1ER AVIS DU CONSEIL D''ETAT'
+    WHEN name = 'DerAvisCE' THEN 'DATE DU L''AVIS LE PLUS RÉCENT DU CONSEIL D''ETAT'
+    WHEN name = '1erRapp' THEN 'DATE DE NOMINATION DU 1ER RAPPORTEUR'
+    WHEN name = 'DerRapp' THEN 'DATE DE NOMINATION DU DERNIER RAPPORTEUR (LE CAS ÉCHÉANT, SI PLUSIEURS RAPPORTEURS DIFFÉRENTS)'
+    WHEN name = 'RappCommPrev' THEN 'DATE PRÉVISIONNELLE DU RAPPORT DE COMMISSION'
+    WHEN name = 'RappComm' THEN 'DATE DU RAPPORT DE COMMISSION'
+    WHEN name = 'Comm1' THEN 'DATE DE LA 1ÈRE RÉUNION DE COMMISSION QUI A TRAVAILLÉ SUR CE DOSSIER'
+    WHEN name = 'CommLast' THEN 'DATE DE LA  RÉUNION DE COMMISSION LA PLUS RÉCENTE QUI A TRAVAILLÉ SUR CE DOSSIER'
+    WHEN name = 'SeanPub1' THEN 'DATE DE LA PREMIÈRE SÉANCE PUBLIQUE DE PRÉSENTATION DU DOSSIER'
+    WHEN name = 'Vote1' THEN 'DATE DU 1ER VOTE EN SÉANCE PUBLIQUE'
+    WHEN name = 'Vote2' THEN 'DATE DU 2ÈME VOTE (LE CAS ÉCHÉANT) EN SÉANCE PUBLIQUE'
+    WHEN name = 'DispVote' THEN 'DATE DE DISPENSE DU 2ÈME VOTE'
+    WHEN name = '1erAmdtGvt' THEN 'DATE DU 1ER AMENDEMENT PROPOSÉ PAR LE GOUVERNEMENT'
+    WHEN name = 'DerAmdtGvt' THEN 'DATE DU PLUS RÉCENT AMENDEMENT PROPOSÉ PAR LE GOUVERNEMENT'
+    WHEN name = '1erAmdtComm' THEN 'DATE DU 1ER AMENDEMENT PROPOSÉ PAR LA COMMISSION'
+    WHEN name = 'DerAmdtComm' THEN 'DATE DU PLUS RÉCENT AMENDEMENT PROPOSÉ PAR LA COMMISSION'
+    WHEN name = 'AvisCP' THEN 'DATE DE L''AVIS DE LA CONFÉRENCE DES PRÉSIDENTS'
+    WHEN name = 'Publication' THEN 'DATE DE PUBLICATION AU JOURNAL OFFICIEL'
+    WHEN name = 'NbrAut' THEN 'NOMBRE D''AUTEURS DU TEXTE'
+    WHEN name = 'Auteurs' THEN 'LISTE DES AUTEURS DU TEXTE'
+    WHEN name = 'NbrComm' THEN 'NOMBRE DE COMMISSION(S) EN CHARGE DU DOSSIER'
+    WHEN name = 'Comm' THEN 'LISTE DE(S) COMMISSION(S) EN CHARGE DU DOSSIER'
+    WHEN name = 'NbrPres' THEN 'NOMBRE DE COMMISSION(S) PRESSENTIE(S)'
+    WHEN name = 'Pressentie' THEN 'LISTE DE(S) COMMISSIONS(S) PRESSENTIE(S)'
+    WHEN name = 'NbrRapp' THEN 'NOMBRE DE RAPPORTEUR(S)'
+    WHEN name = 'Rapporteur' THEN 'LISTE DES RAPPORTEURS'
+    WHEN name = 'NbrAjPPGvt' THEN 'NOMBRE D''AJOUTS DE PRISE DE POSITION DU GOUVERNEMENT'
+    WHEN name = 'AjAvisCHD' THEN 'NOMBRE D''AJOUTS DE PRISE DE POSITION DE LA CHAMBRE'
+    WHEN name = 'AjAvisCE' THEN 'NOMBRE D''AJOUTS DE PRISE DE POSITION DU CONSEIL D''ETAT'
+    WHEN name = 'AjAmdtGvt' THEN 'NOMBRE D''AJOUTS D''AMENDEMENTS PROPOSÉS PAR LE GOUVERNEMENT'
+    WHEN name = 'AjAmdtComm' THEN 'NOMBRE D''AJOUTS D''AMENDEMENTS PROPOSÉS PAR LA COMMISSION'
+    WHEN name = 'NbrComm2' THEN 'NOMBRE DE COMMISSIONS CONCERNÉES PAR LE DOSSIER'
+    WHEN name = 'cmt_commission' THEN 'COMMENTAIRE SUR LA COMMISSION'
+    WHEN name = 'cmt_commission_pressentie' THEN 'COMMENTAIRE SUR LA COMMISSION PRESSENTIE'
+    ELSE description
+END;
+
+--update the few that did not fill in properly
+UPDATE table_metadata SET description = CASE
+	WHEN name = 'Relatifà' THEN 'INTITULÉ DU DOSSIER'
+	WHEN name = 'co_co' THEN 'TEXTE CONSOLIDÉ CONTENANT LE DÉPÔT ET L''ENSEMBLE DES PV DES RÉUNIONS ET AVIS DISPONIBLES'
+	ELSE description
+END;
+
+--table petition
+-- Update descriptions for specific columns based on new definitions
+UPDATE table_metadata
+SET description = CASE
+	WHEN name = 'PETITION_NBR' THEN 'Numéro de la pétition'
+    WHEN name = 'FILING_DATE' THEN 'Date de dépôt de la pétition'
+    WHEN name = 'OFFICIAL_TITLE' THEN 'Titre officiel de la pétition'
+    WHEN name = 'TYPE' THEN 'Type de pétition (ex. : ORD = ordinaire)'
+    WHEN name = 'STATUS' THEN 'Statut actuel (ex. : CLOTUREE, RETIREE)'
+    WHEN name = 'ASSOCIATION_ROLE' THEN 'Rôle du déposant au sein de l''association'
+    WHEN name = 'ASSOCIATION_NAME' THEN 'Nom de l''association ayant introduit la pétition'
+    WHEN name = 'RESIDENCY_COUNTRY' THEN 'Pays de résidence du déposant (souvent LU pour Luxembourg)'
+    WHEN name = 'GOAL' THEN 'Objectif succinct de la pétition'
+    WHEN name = 'SIGN_NBR_ELECTRONIC' THEN 'Nombre de signatures électroniques'
+    WHEN name = 'SIGN_NBR_PAPER' THEN 'Nombre de signatures papier'
+    WHEN name = 'MOTIVATION' THEN 'Texte expliquant les raisons et les arguments de la pétition'
+    ELSE description
+END;
+
+
+UPDATE table_metadata
+SET description = CASE
+    WHEN name = 'QUESTION_NUMBER' THEN 'Numéro de la question parlementaire'
+    WHEN name = 'QUESTION_TYPE' THEN 'Type de question (ex. : QE = question écrite, QU = question orale urgente)'
+    WHEN name = 'QUESTION_STATUS' THEN 'Statut de la question (ex. : ETAT_REPONDUE)'
+    WHEN name = 'LEGISLATURE_NUMBER' THEN 'Numéro de la législature lors du dépôt de la question'
+    WHEN name = 'SESSION_NUMBER' THEN 'Numéro de la session parlementaire de la question'
+    WHEN name = 'QUESTION_DEPOSIT_DATE' THEN 'Date de dépôt de la question'
+    WHEN name = 'QUESTION_EVACUATION_DATE' THEN 'Date d''évacuation (traitement) de la question'
+    WHEN name = 'RESPONSE_LEGISLATURE_NUMBER' THEN 'Numéro de la législature à laquelle la réponse a été fournie'
+    WHEN name = 'RESPONSE_SESSION_NUMBER' THEN 'Numéro de la session parlementaire de la réponse'
+    WHEN name = 'RESPONSE_DEPOSIT_DATE' THEN 'Date de dépôt de la réponse'
+    WHEN name = 'RESPONSE_TYPE' THEN 'Type de réponse (ex. : Réponse écrite, Réponse orale)'
+    WHEN name = 'QUESTION_TITLE' THEN 'Intitulé ou sujet de la question'
+    WHEN name = 'QUESTION_AUTHORS' THEN 'Nom(s) des député(s) auteur(s) de la question'
+    WHEN name = 'QUESTION_RECIPIENTS' THEN 'Nom(s) du ou des ministres ou responsables à qui la question est adressée'
+    WHEN name = 'RESPONSE_AUTHORS' THEN 'Nom(s) du ou des auteurs de la réponse'
+    ELSE description
+END;
+
+
+UPDATE table_metadata
+SET description = CASE
+    WHEN name = 'LEGISLATURE_NUMBER' THEN 'Numéro de la législature en cours lors de la séance'
+    WHEN name = 'SESSION_NUMBER' THEN 'Numéro de la session parlementaire'
+    WHEN name = 'MEETING_DATE' THEN 'Date et heure de la séance parlementaire'
+    WHEN name = 'MEETING_NUMBER' THEN 'Identifiant ou titre de la séance (ex. : Séance publique n° 10)'
+    WHEN name = 'MEETING_PRESENCE' THEN 'Présence du député à la séance (ex. : PRESENT)'
+    WHEN name = 'PERSON_TITLE' THEN 'Titre de civilité (ex. : Madame, Monsieur)'
+    WHEN name = 'NAME' THEN 'Nom de famille du député'
+    WHEN name = 'FIRSTNAME' THEN 'Prénom du député'
+    WHEN name = 'POLITICAL_GROUP' THEN 'Groupe politique auquel appartient le député (peut être vide)'
+    WHEN name = 'POLITICAL_PARTY' THEN 'Parti politique du député (ex. : CSV, DP, déi gréng)'
+    ELSE description
+END;
+
+UPDATE table_metadata
+SET description = CASE
+    WHEN name = 'SESSION' THEN 'Nom de la session parlementaire (ex. : Session ordinaire 2023-2028)'
+    WHEN name = 'MEETING_DATE' THEN 'Date de la séance au cours de laquelle l’événement a eu lieu'
+    WHEN name = 'MEETING_NUMBER' THEN 'Numéro ou identifiant de la séance (ex. : 11)'
+    WHEN name = 'PERSON_TITLE' THEN 'Titre de civilité du député ou intervenant (ex. : Madame, Monsieur)'
+    WHEN name = 'NAME' THEN 'Nom de famille du député ou intervenant'
+    WHEN name = 'FIRSTNAME' THEN 'Prénom du député ou intervenant'
+    WHEN name = 'POLITICAL_PARTY' THEN 'Parti politique du député ou intervenant (ex. : DP, LSAP, déi gréng)'
+    WHEN name = 'AGENDA_ITEM' THEN 'Numéro du point à l’ordre du jour (ex. : 2, 3)'
+    WHEN name = 'RUBRIQUE' THEN 'Catégorie ou nature de l’intervention à l’ordre du jour (ex. : Interpellation, Dépôt d une proposition de loi)'
+    WHEN name = 'EVENT_TITLE' THEN 'Intitulé complet de l’intervention ou de l’événement'
+    WHEN name = 'POLITICAL_GROUP' THEN 'Groupe parlementaire représenté dans le cadre de l’intervention (peut être vide)'
+    WHEN name = 'MOTION_INFO' THEN 'Référence à une motion liée à l’intervention (ex. : Motion 1, Motion 2)'
+    WHEN name = 'DEPOT_INFO' THEN 'Informations supplémentaires liées au dépôt, généralement vide dans ces exemples'
+    ELSE description
+END;
+
+UPDATE table_metadata
+SET description = CASE
+    WHEN name = 'MEETING_DATE' THEN 'Date et heure de la séance au cours de laquelle le vote a eu lieu'
+    WHEN name = 'VOTE_TYPE' THEN 'Type de vote (ex. : Voté, Adopté, Rejeté — ici toujours &quot;Voté&quot;)'
+    WHEN name = 'PERSON_TITLE' THEN 'Titre de civilité du député ayant voté (ex. : Madame, Monsieur)'
+    WHEN name = 'NAME' THEN 'Nom de famille du député'
+    WHEN name = 'FIRSTNAME' THEN 'Prénom du député'
+    WHEN name = 'POLITICAL_GROUP' THEN 'Groupe parlementaire auquel le député appartient (peut être vide)'
+    WHEN name = 'POLITICAL_PARTY' THEN 'Parti politique du député (ex. : CSV, DP, déi Lénk)'
+    WHEN name = 'VOTE_RESULT' THEN 'Résultat du vote du député (ex. : Oui, Non, Abstention, Ne participe pas)'
+    WHEN name = 'VOTE_NAME' THEN 'Titre ou objet de la motion ou loi soumise au vote (ex. : MO 1 - Extensions de la ligne de tramway: Motion 1 - M. Sehovic)'
+    ELSE description
+END;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
