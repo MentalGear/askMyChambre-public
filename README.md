@@ -1,4 +1,4 @@
-# AskMyChambre or DataIntelligence
+# AskMyChambre 0.2
 A semantic search interface for parliamentary data in Luxembourg.
 
 ## Updates made:
