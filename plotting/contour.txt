@@ -1,0 +1,1040 @@
+Python Figure Reference: contour Traces
+A plotly.graph_objects.Contour trace is a graph object in the figure's data list with any of the named arguments or attributes listed below.
+
+The data from which contour lines are computed is set in `z`. Data in `z` must be a 2D list of numbers. Say that `z` has N rows and M columns, then by default, these N rows correspond to N y coordinates (set in `y` or auto-generated) and the M columns correspond to M x coordinates (set in `x` or auto-generated). By setting `transpose` to "True", the above behavior is flipped.
+
+name
+Code: fig.update_traces(name=<VALUE>, selector=dict(type='contour'))
+Type: string
+Sets the trace name. The trace name appears as the legend item and on hover.
+
+visible
+Code: fig.update_traces(visible=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( True | False | "legendonly" )
+Default: True
+Determines whether or not this trace is visible. If "legendonly", the trace is not drawn, but can appear as a legend item (provided that the legend itself is visible).
+
+showlegend
+Code: fig.update_traces(showlegend=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Default: True
+Determines whether or not an item corresponding to this trace is shown in the legend.
+
+legend
+Code: fig.update_traces(legend=<VALUE>, selector=dict(type='contour'))
+Type: subplotid
+Default: legend
+Sets the reference to a legend to show this trace in. References to these legends are "legend", "legend2", "legend3", etc. Settings for these legends are set in the layout, under `layout.legend`, `layout.legend2`, etc.
+
+legendrank
+Code: fig.update_traces(legendrank=<VALUE>, selector=dict(type='contour'))
+Type: number
+Default: 1000
+Sets the legend rank for this trace. Items and groups with smaller ranks are presented on top/left side while with "reversed" `legend.traceorder` they are on bottom/right side. The default legendrank is 1000, so that you can use ranks less than 1000 to place certain items before all unranked items, and ranks greater than 1000 to go after all unranked items. When having unranked or equal rank items shapes would be displayed after traces i.e. according to their order in data and layout.
+
+legendgroup
+Code: fig.update_traces(legendgroup=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets the legend group for this trace. Traces and shapes part of the same legend group hide/show at the same time when toggling legend items.
+
+legendgrouptitle
+Code: fig.update_traces(legendgrouptitle=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+font
+Code: fig.update_traces(legendgrouptitle_font=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+Sets this legend group's title font.
+
+color
+Code: fig.update_traces(legendgrouptitle_font_color=<VALUE>, selector=dict(type='contour'))
+Type: color
+family
+Code: fig.update_traces(legendgrouptitle_font_family=<VALUE>, selector=dict(type='contour'))
+Type: string
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(legendgrouptitle_font_lineposition=<VALUE>, selector=dict(type='contour'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(legendgrouptitle_font_shadow=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(legendgrouptitle_font_size=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 1
+style
+Code: fig.update_traces(legendgrouptitle_font_style=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(legendgrouptitle_font_textcase=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(legendgrouptitle_font_variant=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(legendgrouptitle_font_weight=<VALUE>, selector=dict(type='contour'))
+Type: integer between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+text
+Code: fig.update_traces(legendgrouptitle_text=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets the title of the legend group.
+
+legendwidth
+Code: fig.update_traces(legendwidth=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Sets the width (in px or fraction) of the legend for this trace.
+
+opacity
+Code: fig.update_traces(opacity=<VALUE>, selector=dict(type='contour'))
+Type: number between or equal to 0 and 1
+Default: 1
+Sets the opacity of the trace.
+
+ids
+Code: fig.update_traces(ids=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Assigns id labels to each datum. These ids for object constancy of data points during animation. Should be an array of strings, not numbers or any other type.
+
+zorder
+Code: fig.update_traces(zorder=<VALUE>, selector=dict(type='contour'))
+Type: integer
+Default: 0
+Sets the layer on which this trace is displayed, relative to other SVG traces on the same subplot. SVG traces with higher `zorder` appear in front of those with lower `zorder`.
+
+x
+Code: fig.update_traces(x=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the x coordinates.
+
+x0
+Code: fig.update_traces(x0=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Default: 0
+Alternate to `x`. Builds a linear space of x coordinates. Use with `dx` where `x0` is the starting coordinate and `dx` the step.
+
+dx
+Code: fig.update_traces(dx=<VALUE>, selector=dict(type='contour'))
+Type: number
+Default: 1
+Sets the x coordinate step. See `x0` for more info.
+
+xtype
+Code: fig.update_traces(xtype=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "array" | "scaled" )
+If "array", the heatmap's x coordinates are given by "x" (the default behavior when `x` is provided). If "scaled", the heatmap's x coordinates are given by "x0" and "dx" (the default behavior when `x` is not provided).
+
+y
+Code: fig.update_traces(y=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the y coordinates.
+
+y0
+Code: fig.update_traces(y0=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Default: 0
+Alternate to `y`. Builds a linear space of y coordinates. Use with `dy` where `y0` is the starting coordinate and `dy` the step.
+
+dy
+Code: fig.update_traces(dy=<VALUE>, selector=dict(type='contour'))
+Type: number
+Default: 1
+Sets the y coordinate step. See `y0` for more info.
+
+ytype
+Code: fig.update_traces(ytype=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "array" | "scaled" )
+If "array", the heatmap's y coordinates are given by "y" (the default behavior when `y` is provided) If "scaled", the heatmap's y coordinates are given by "y0" and "dy" (the default behavior when `y` is not provided)
+
+z
+Code: fig.update_traces(z=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the z data.
+
+text
+Code: fig.update_traces(text=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the text elements associated with each z value.
+
+texttemplate
+Code: fig.update_traces(texttemplate=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+For this trace it only has an effect if `coloring` is set to "heatmap". Template string used for rendering the information text that appear on points. Note that this will override `textinfo`. Variables are inserted using %{variable}, for example "y: %{y}". Numbers are formatted using d3-format's syntax %{variable:d3-format}, for example "Price: %{y:$.2f}". https://github.com/d3/d3-format/tree/v1.4.5#d3-format for details on the formatting syntax. Dates are formatted using d3-time-format's syntax %{variable|d3-time-format}, for example "Day: %{2019-01-01|%A}". https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format for details on the date formatting syntax. Every attributes that can be specified per-point (the ones that are `arrayOk: True`) are available. Finally, the template string has access to variables `x`, `y`, `z` and `text`.
+
+hovertext
+Code: fig.update_traces(hovertext=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Same as `text`.
+
+hoverinfo
+Code: fig.update_traces(hoverinfo=<VALUE>, selector=dict(type='contour'))
+Type: flaglist string. Any combination of "x", "y", "z", "text", "name" joined with a "+" OR "all" or "none" or "skip".
+Examples: "x", "y", "x+y", "x+y+z", "all"
+Default: "all"
+Determines which trace information appear on hover. If `none` or `skip` are set, no information is displayed upon hovering. But, if `none` is set, click and hover events are still fired.
+
+hovertemplate
+Code: fig.update_traces(hovertemplate=<VALUE>, selector=dict(type='contour'))
+Type: string or array of strings
+Default: ""
+Template string used for rendering the information that appear on hover box. Note that this will override `hoverinfo`. Variables are inserted using %{variable}, for example "y: %{y}" as well as %{xother}, {%_xother}, {%_xother_}, {%xother_}. When showing info for several points, "xother" will be added to those with different x positions from the first point. An underscore before or after "(x|y)other" will add a space on that side, only when this field is shown. Numbers are formatted using d3-format's syntax %{variable:d3-format}, for example "Price: %{y:$.2f}". https://github.com/d3/d3-format/tree/v1.4.5#d3-format for details on the formatting syntax. Dates are formatted using d3-time-format's syntax %{variable|d3-time-format}, for example "Day: %{2019-01-01|%A}". https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format for details on the date formatting syntax. The variables available in `hovertemplate` are the ones emitted as event data described at this link https://plotly.com/javascript/plotlyjs-events/#event-data. Additionally, every attributes that can be specified per-point (the ones that are `arrayOk: True`) are available. Anything contained in tag `<extra>` is displayed in the secondary box, for example "<extra>{fullData.name}</extra>". To hide the secondary box completely, use an empty tag `<extra></extra>`.
+
+xhoverformat
+Code: fig.update_traces(xhoverformat=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets the hover text formatting rulefor `x` using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format. And for dates see: https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format. We add two items to d3's date formatter: "%h" for half of the year as a decimal number as well as "%{n}f" for fractional seconds with n digits. For example, "2016-10-13 09:15:23.456" with tickformat "%H~%M~%S.%2f" would display "09~15~23.46"By default the values are formatted using `xaxis.hoverformat`.
+
+yhoverformat
+Code: fig.update_traces(yhoverformat=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets the hover text formatting rulefor `y` using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format. And for dates see: https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format. We add two items to d3's date formatter: "%h" for half of the year as a decimal number as well as "%{n}f" for fractional seconds with n digits. For example, "2016-10-13 09:15:23.456" with tickformat "%H~%M~%S.%2f" would display "09~15~23.46"By default the values are formatted using `yaxis.hoverformat`.
+
+meta
+Code: fig.update_traces(meta=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Assigns extra meta information associated with this trace that can be used in various text attributes. Attributes such as trace `name`, graph, axis and colorbar `title.text`, annotation `text` `rangeselector`, `updatemenues` and `sliders` `label` text all support `meta`. To access the trace `meta` values in an attribute in the same trace, simply use `%{meta[i]}` where `i` is the index or key of the `meta` item in question. To access trace `meta` in layout attributes, use `%{data[n[.meta[i]}` where `i` is the index or key of the `meta` and `n` is the trace index.
+
+customdata
+Code: fig.update_traces(customdata=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Assigns extra data each datum. This may be useful when listening to hover, click and selection events. Note that, "scatter" traces also appends customdata items in the markers DOM elements
+
+xaxis
+Code: fig.update_traces(xaxis=<VALUE>, selector=dict(type='contour'))
+Type: subplotid
+Default: x
+Sets a reference between this trace's x coordinates and a 2D cartesian x axis. If "x" (the default value), the x coordinates refer to `layout.xaxis`. If "x2", the x coordinates refer to `layout.xaxis2`, and so on.
+
+yaxis
+Code: fig.update_traces(yaxis=<VALUE>, selector=dict(type='contour'))
+Type: subplotid
+Default: y
+Sets a reference between this trace's y coordinates and a 2D cartesian y axis. If "y" (the default value), the y coordinates refer to `layout.yaxis`. If "y2", the y coordinates refer to `layout.yaxis2`, and so on.
+
+coloraxis
+Code: fig.update_traces(coloraxis=<VALUE>, selector=dict(type='contour'))
+Type: subplotid
+Sets a reference to a shared color axis. References to these shared color axes are "coloraxis", "coloraxis2", "coloraxis3", etc. Settings for these shared color axes are set in the layout, under `layout.coloraxis`, `layout.coloraxis2`, etc. Note that multiple color scales can be linked to the same color axis.
+
+xperiod
+Code: fig.update_traces(xperiod=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Default: 0
+Only relevant when the axis `type` is "date". Sets the period positioning in milliseconds or "M<n>" on the x axis. Special values in the form of "M<n>" could be used to declare the number of months. In this case `n` must be a positive integer.
+
+xperiodalignment
+Code: fig.update_traces(xperiodalignment=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "start" | "middle" | "end" )
+Default: "middle"
+Only relevant when the axis `type` is "date". Sets the alignment of data points on the x axis.
+
+xperiod0
+Code: fig.update_traces(xperiod0=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Only relevant when the axis `type` is "date". Sets the base for period positioning in milliseconds or date string on the x0 axis. When `x0period` is round number of weeks, the `x0period0` by default would be on a Sunday i.e. 2000-01-02, otherwise it would be at 2000-01-01.
+
+yperiod
+Code: fig.update_traces(yperiod=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Default: 0
+Only relevant when the axis `type` is "date". Sets the period positioning in milliseconds or "M<n>" on the y axis. Special values in the form of "M<n>" could be used to declare the number of months. In this case `n` must be a positive integer.
+
+yperiodalignment
+Code: fig.update_traces(yperiodalignment=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "start" | "middle" | "end" )
+Default: "middle"
+Only relevant when the axis `type` is "date". Sets the alignment of data points on the y axis.
+
+yperiod0
+Code: fig.update_traces(yperiod0=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Only relevant when the axis `type` is "date". Sets the base for period positioning in milliseconds or date string on the y0 axis. When `y0period` is round number of weeks, the `y0period0` by default would be on a Sunday i.e. 2000-01-02, otherwise it would be at 2000-01-01.
+
+line
+Code: fig.update_traces(line=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+color
+Code: fig.update_traces(line_color=<VALUE>, selector=dict(type='contour'))
+Type: color
+Sets the color of the contour level. Has no effect if `contours.coloring` is set to "lines".
+
+dash
+Code: fig.update_traces(line_dash=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: "solid"
+Sets the dash style of lines. Set to a dash type string ("solid", "dot", "dash", "longdash", "dashdot", or "longdashdot") or a dash length list in px (eg "5px,10px,2px,2px").
+
+smoothing
+Code: fig.update_traces(line_smoothing=<VALUE>, selector=dict(type='contour'))
+Type: number between or equal to 0 and 1.3
+Default: 1
+Sets the amount of smoothing for the contour lines, where "0" corresponds to no smoothing.
+
+width
+Code: fig.update_traces(line_width=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Sets the contour line width in (in px) Defaults to "0.5" when `contours.type` is "levels". Defaults to "2" when `contour.type` is "constraint".
+
+textfont
+Code: fig.update_traces(textfont=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+For this trace it only has an effect if `coloring` is set to "heatmap". Sets the text font.
+
+color
+Code: fig.update_traces(textfont_color=<VALUE>, selector=dict(type='contour'))
+Type: color
+Default: "auto"
+family
+Code: fig.update_traces(textfont_family=<VALUE>, selector=dict(type='contour'))
+Type: string
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(textfont_lineposition=<VALUE>, selector=dict(type='contour'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(textfont_shadow=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(textfont_size=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 1
+Default: "auto"
+style
+Code: fig.update_traces(textfont_style=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(textfont_textcase=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(textfont_variant=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(textfont_weight=<VALUE>, selector=dict(type='contour'))
+Type: integer between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+colorbar
+Code: fig.update_traces(colorbar=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+bgcolor
+Code: fig.update_traces(colorbar_bgcolor=<VALUE>, selector=dict(type='contour'))
+Type: color
+Default: "rgba(0,0,0,0)"
+Sets the color of padded area.
+
+bordercolor
+Code: fig.update_traces(colorbar_bordercolor=<VALUE>, selector=dict(type='contour'))
+Type: color
+Default: "#444"
+Sets the axis line color.
+
+borderwidth
+Code: fig.update_traces(colorbar_borderwidth=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 0
+Sets the width (in px) or the border enclosing this color bar.
+
+dtick
+Code: fig.update_traces(colorbar_dtick=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Sets the step in-between ticks on this axis. Use with `tick0`. Must be a positive number, or special strings available to "log" and "date" axes. If the axis `type` is "log", then ticks are set every 10^(n"dtick) where n is the tick number. For example, to set a tick mark at 1, 10, 100, 1000, ... set dtick to 1. To set tick marks at 1, 100, 10000, ... set dtick to 2. To set tick marks at 1, 5, 25, 125, 625, 3125, ... set dtick to log_10(5), or 0.69897000433. "log" has several special values; "L<f>", where `f` is a positive number, gives ticks linearly spaced in value (but not position). For example `tick0` = 0.1, `dtick` = "L0.5" will put ticks at 0.1, 0.6, 1.1, 1.6 etc. To show powers of 10 plus small digits between, use "D1" (all digits) or "D2" (only 2 and 5). `tick0` is ignored for "D1" and "D2". If the axis `type` is "date", then you must convert the time to milliseconds. For example, to set the interval between ticks to one day, set `dtick` to 86400000.0. "date" also has special values "M<n>" gives ticks spaced by a number of months. `n` must be a positive integer. To set ticks on the 15th of every third month, set `tick0` to "2000-01-15" and `dtick` to "M3". To set ticks every 4 years, set `dtick` to "M48"
+
+exponentformat
+Code: fig.update_traces(colorbar_exponentformat=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "none" | "e" | "E" | "power" | "SI" | "B" )
+Default: "B"
+Determines a formatting rule for the tick exponents. For example, consider the number 1,000,000,000. If "none", it appears as 1,000,000,000. If "e", 1e+9. If "E", 1E+9. If "power", 1x10^9 (with 9 in a super script). If "SI", 1G. If "B", 1B.
+
+labelalias
+Code: fig.update_traces(colorbar_labelalias=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Replacement text for specific tick or hover labels. For example using {US: 'USA', CA: 'Canada'} changes US to USA and CA to Canada. The labels we would have shown must match the keys exactly, after adding any tickprefix or ticksuffix. For negative numbers the minus sign symbol used (U+2212) is wider than the regular ascii dash. That means you need to use −1 instead of -1. labelalias can be used with any axis type, and both keys (if needed) and values (if desired) can include html-like tags or MathJax.
+
+len
+Code: fig.update_traces(colorbar_len=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 1
+Sets the length of the color bar This measure excludes the padding of both ends. That is, the color bar length is this length minus the padding on both ends.
+
+lenmode
+Code: fig.update_traces(colorbar_lenmode=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "fraction" | "pixels" )
+Default: "fraction"
+Determines whether this color bar's length (i.e. the measure in the color variation direction) is set in units of plot "fraction" or in "pixels. Use `len` to set the value.
+
+minexponent
+Code: fig.update_traces(colorbar_minexponent=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 3
+Hide SI prefix for 10^n if |n| is below this number. This only has an effect when `tickformat` is "SI" or "B".
+
+nticks
+Code: fig.update_traces(colorbar_nticks=<VALUE>, selector=dict(type='contour'))
+Type: integer greater than or equal to 0
+Default: 0
+Specifies the maximum number of ticks for the particular axis. The actual number of ticks will be chosen automatically to be less than or equal to `nticks`. Has an effect only if `tickmode` is set to "auto".
+
+orientation
+Code: fig.update_traces(colorbar_orientation=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "h" | "v" )
+Default: "v"
+Sets the orientation of the colorbar.
+
+outlinecolor
+Code: fig.update_traces(colorbar_outlinecolor=<VALUE>, selector=dict(type='contour'))
+Type: color
+Default: "#444"
+Sets the axis line color.
+
+outlinewidth
+Code: fig.update_traces(colorbar_outlinewidth=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 1
+Sets the width (in px) of the axis line.
+
+separatethousands
+Code: fig.update_traces(colorbar_separatethousands=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+If "True", even 4-digit integers are separated
+
+showexponent
+Code: fig.update_traces(colorbar_showexponent=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "all" | "first" | "last" | "none" )
+Default: "all"
+If "all", all exponents are shown besides their significands. If "first", only the exponent of the first tick is shown. If "last", only the exponent of the last tick is shown. If "none", no exponents appear.
+
+showticklabels
+Code: fig.update_traces(colorbar_showticklabels=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Default: True
+Determines whether or not the tick labels are drawn.
+
+showtickprefix
+Code: fig.update_traces(colorbar_showtickprefix=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "all" | "first" | "last" | "none" )
+Default: "all"
+If "all", all tick labels are displayed with a prefix. If "first", only the first tick is displayed with a prefix. If "last", only the last tick is displayed with a suffix. If "none", tick prefixes are hidden.
+
+showticksuffix
+Code: fig.update_traces(colorbar_showticksuffix=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "all" | "first" | "last" | "none" )
+Default: "all"
+Same as `showtickprefix` but for tick suffixes.
+
+thickness
+Code: fig.update_traces(colorbar_thickness=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 30
+Sets the thickness of the color bar This measure excludes the size of the padding, ticks and labels.
+
+thicknessmode
+Code: fig.update_traces(colorbar_thicknessmode=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "fraction" | "pixels" )
+Default: "pixels"
+Determines whether this color bar's thickness (i.e. the measure in the constant color direction) is set in units of plot "fraction" or in "pixels". Use `thickness` to set the value.
+
+tick0
+Code: fig.update_traces(colorbar_tick0=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Sets the placement of the first tick on this axis. Use with `dtick`. If the axis `type` is "log", then you must take the log of your starting tick (e.g. to set the starting tick to 100, set the `tick0` to 2) except when `dtick`="L<f>" (see `dtick` for more info). If the axis `type` is "date", it should be a date string, like date data. If the axis `type` is "category", it should be a number, using the scale where each category is assigned a serial number from zero in the order it appears.
+
+tickangle
+Code: fig.update_traces(colorbar_tickangle=<VALUE>, selector=dict(type='contour'))
+Type: angle
+Default: "auto"
+Sets the angle of the tick labels with respect to the horizontal. For example, a `tickangle` of -90 draws the tick labels vertically.
+
+tickcolor
+Code: fig.update_traces(colorbar_tickcolor=<VALUE>, selector=dict(type='contour'))
+Type: color
+Default: "#444"
+Sets the tick color.
+
+tickfont
+Code: fig.update_traces(colorbar_tickfont=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+Sets the color bar's tick label font
+
+color
+Code: fig.update_traces(colorbar_tickfont_color=<VALUE>, selector=dict(type='contour'))
+Type: color
+family
+Code: fig.update_traces(colorbar_tickfont_family=<VALUE>, selector=dict(type='contour'))
+Type: string
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(colorbar_tickfont_lineposition=<VALUE>, selector=dict(type='contour'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(colorbar_tickfont_shadow=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(colorbar_tickfont_size=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 1
+style
+Code: fig.update_traces(colorbar_tickfont_style=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(colorbar_tickfont_textcase=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(colorbar_tickfont_variant=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(colorbar_tickfont_weight=<VALUE>, selector=dict(type='contour'))
+Type: integer between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+tickformat
+Code: fig.update_traces(colorbar_tickformat=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets the tick label formatting rule using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format. And for dates see: https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format. We add two items to d3's date formatter: "%h" for half of the year as a decimal number as well as "%{n}f" for fractional seconds with n digits. For example, "2016-10-13 09:15:23.456" with tickformat "%H~%M~%S.%2f" would display "09~15~23.46"
+
+tickformatstops
+Code: fig.update_traces(colorbar_tickformatstops=list(...), selector=dict(type='contour'))
+Type: list of dict where each dict has one or more of the keys listed below.
+dtickrange
+Parent: data[type=contour].colorbar.tickformatstops[]
+Type: list
+range ["min", "max"], where "min", "max" - dtick values which describe some zoom level, it is possible to omit "min" or "max" value by passing "null"
+
+enabled
+Parent: data[type=contour].colorbar.tickformatstops[]
+Type: boolean
+Default: True
+Determines whether or not this stop is used. If `False`, this stop is ignored even within its `dtickrange`.
+
+name
+Parent: data[type=contour].colorbar.tickformatstops[]
+Type: string
+When used in a template, named items are created in the output figure in addition to any items the figure already has in this array. You can modify these items in the output figure by making your own item with `templateitemname` matching this `name` alongside your modifications (including `visible: False` or `enabled: False` to hide it). Has no effect outside of a template.
+
+templateitemname
+Parent: data[type=contour].colorbar.tickformatstops[]
+Type: string
+Used to refer to a named item in this array in the template. Named items from the template will be created even without a matching item in the input figure, but you can modify one by making an item with `templateitemname` matching its `name`, alongside your modifications (including `visible: False` or `enabled: False` to hide it). If there is no template or no matching item, this item will be hidden unless you explicitly show it with `visible: True`.
+
+value
+Parent: data[type=contour].colorbar.tickformatstops[]
+Type: string
+Default: ""
+string - dtickformat for described zoom level, the same as "tickformat"
+
+ticklabeloverflow
+Code: fig.update_traces(colorbar_ticklabeloverflow=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "allow" | "hide past div" | "hide past domain" )
+Determines how we handle tick labels that would overflow either the graph div or the domain of the axis. The default value for inside tick labels is "hide past domain". In other cases the default is "hide past div".
+
+ticklabelposition
+Code: fig.update_traces(colorbar_ticklabelposition=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "outside" | "inside" | "outside top" | "inside top" | "outside left" | "inside left" | "outside right" | "inside right" | "outside bottom" | "inside bottom" )
+Default: "outside"
+Determines where tick labels are drawn relative to the ticks. Left and right options are used when `orientation` is "h", top and bottom when `orientation` is "v".
+
+ticklabelstep
+Code: fig.update_traces(colorbar_ticklabelstep=<VALUE>, selector=dict(type='contour'))
+Type: integer greater than or equal to 1
+Default: 1
+Sets the spacing between tick labels as compared to the spacing between ticks. A value of 1 (default) means each tick gets a label. A value of 2 means shows every 2nd label. A larger value n means only every nth tick is labeled. `tick0` determines which labels are shown. Not implemented for axes with `type` "log" or "multicategory", or when `tickmode` is "array".
+
+ticklen
+Code: fig.update_traces(colorbar_ticklen=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 5
+Sets the tick length (in px).
+
+tickmode
+Code: fig.update_traces(colorbar_tickmode=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "auto" | "linear" | "array" )
+Sets the tick mode for this axis. If "auto", the number of ticks is set via `nticks`. If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick` ("linear" is the default value if `tick0` and `dtick` are provided). If "array", the placement of the ticks is set via `tickvals` and the tick text is `ticktext`. ("array" is the default value if `tickvals` is provided).
+
+tickprefix
+Code: fig.update_traces(colorbar_tickprefix=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets a tick label prefix.
+
+ticks
+Code: fig.update_traces(colorbar_ticks=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "outside" | "inside" | "" )
+Default: ""
+Determines whether ticks are drawn or not. If "", this axis' ticks are not drawn. If "outside" ("inside"), this axis' are drawn outside (inside) the axis lines.
+
+ticksuffix
+Code: fig.update_traces(colorbar_ticksuffix=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets a tick label suffix.
+
+ticktext
+Code: fig.update_traces(colorbar_ticktext=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the text displayed at the ticks position via `tickvals`. Only has an effect if `tickmode` is set to "array". Used with `tickvals`.
+
+tickvals
+Code: fig.update_traces(colorbar_tickvals=<VALUE>, selector=dict(type='contour'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the values at which ticks on this axis appear. Only has an effect if `tickmode` is set to "array". Used with `ticktext`.
+
+tickwidth
+Code: fig.update_traces(colorbar_tickwidth=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 1
+Sets the tick width (in px).
+
+title
+Code: fig.update_traces(colorbar_title=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+font
+Code: fig.update_traces(colorbar_title_font=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+Sets this color bar's title font.
+
+color
+Code: fig.update_traces(colorbar_title_font_color=<VALUE>, selector=dict(type='contour'))
+Type: color
+family
+Code: fig.update_traces(colorbar_title_font_family=<VALUE>, selector=dict(type='contour'))
+Type: string
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(colorbar_title_font_lineposition=<VALUE>, selector=dict(type='contour'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(colorbar_title_font_shadow=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(colorbar_title_font_size=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 1
+style
+Code: fig.update_traces(colorbar_title_font_style=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(colorbar_title_font_textcase=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(colorbar_title_font_variant=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(colorbar_title_font_weight=<VALUE>, selector=dict(type='contour'))
+Type: integer between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+side
+Code: fig.update_traces(colorbar_title_side=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "right" | "top" | "bottom" )
+Determines the location of color bar's title with respect to the color bar. Defaults to "top" when `orientation` if "v" and defaults to "right" when `orientation` if "h".
+
+text
+Code: fig.update_traces(colorbar_title_text=<VALUE>, selector=dict(type='contour'))
+Type: string
+Sets the title of the color bar.
+
+x
+Code: fig.update_traces(colorbar_x=<VALUE>, selector=dict(type='contour'))
+Type: number
+Sets the x position with respect to `xref` of the color bar (in plot fraction). When `xref` is "paper", defaults to 1.02 when `orientation` is "v" and 0.5 when `orientation` is "h". When `xref` is "container", defaults to "1" when `orientation` is "v" and 0.5 when `orientation` is "h". Must be between "0" and "1" if `xref` is "container" and between "-2" and "3" if `xref` is "paper".
+
+xanchor
+Code: fig.update_traces(colorbar_xanchor=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "left" | "center" | "right" )
+Sets this color bar's horizontal position anchor. This anchor binds the `x` position to the "left", "center" or "right" of the color bar. Defaults to "left" when `orientation` is "v" and "center" when `orientation` is "h".
+
+xpad
+Code: fig.update_traces(colorbar_xpad=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 10
+Sets the amount of padding (in px) along the x direction.
+
+xref
+Code: fig.update_traces(colorbar_xref=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "container" | "paper" )
+Default: "paper"
+Sets the container `x` refers to. "container" spans the entire `width` of the plot. "paper" refers to the width of the plotting area only.
+
+y
+Code: fig.update_traces(colorbar_y=<VALUE>, selector=dict(type='contour'))
+Type: number
+Sets the y position with respect to `yref` of the color bar (in plot fraction). When `yref` is "paper", defaults to 0.5 when `orientation` is "v" and 1.02 when `orientation` is "h". When `yref` is "container", defaults to 0.5 when `orientation` is "v" and 1 when `orientation` is "h". Must be between "0" and "1" if `yref` is "container" and between "-2" and "3" if `yref` is "paper".
+
+yanchor
+Code: fig.update_traces(colorbar_yanchor=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "top" | "middle" | "bottom" )
+Sets this color bar's vertical position anchor This anchor binds the `y` position to the "top", "middle" or "bottom" of the color bar. Defaults to "middle" when `orientation` is "v" and "bottom" when `orientation` is "h".
+
+ypad
+Code: fig.update_traces(colorbar_ypad=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Default: 10
+Sets the amount of padding (in px) along the y direction.
+
+yref
+Code: fig.update_traces(colorbar_yref=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "container" | "paper" )
+Default: "paper"
+Sets the container `y` refers to. "container" spans the entire `height` of the plot. "paper" refers to the height of the plotting area only.
+
+autocolorscale
+Code: fig.update_traces(autocolorscale=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Determines whether the colorscale is a default palette (`autocolorscale: True`) or the palette determined by `colorscale`. In case `colorscale` is unspecified or `autocolorscale` is True, the default palette will be chosen according to whether numbers in the `color` array are all positive, all negative or mixed.
+
+colorscale
+Code: fig.update_traces(colorscale=<VALUE>, selector=dict(type='contour'))
+Type: colorscale
+Sets the colorscale. The colorscale must be an array containing arrays mapping a normalized value to an rgb, rgba, hex, hsl, hsv, or named color string. At minimum, a mapping for the lowest (0) and highest (1) values are required. For example, `[[0, 'rgb(0,0,255)'], [1, 'rgb(255,0,0)']]`. To control the bounds of the colorscale in color space, use `zmin` and `zmax`. Alternatively, `colorscale` may be a palette name string of the following list: Blackbody,Bluered,Blues,Cividis,Earth,Electric,Greens,Greys,Hot,Jet,Picnic,Portland,Rainbow,RdBu,Reds,Viridis,YlGnBu,YlOrRd.
+
+showscale
+Code: fig.update_traces(showscale=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Default: True
+Determines whether or not a colorbar is displayed for this trace.
+
+reversescale
+Code: fig.update_traces(reversescale=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Reverses the color mapping if True. If True, `zmin` will correspond to the last color in the array and `zmax` will correspond to the first color.
+
+zauto
+Code: fig.update_traces(zauto=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Default: True
+Determines whether or not the color domain is computed with respect to the input data (here in `z`) or the bounds set in `zmin` and `zmax` Defaults to `False` when `zmin` and `zmax` are set by the user.
+
+zhoverformat
+Code: fig.update_traces(zhoverformat=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets the hover text formatting rulefor `z` using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format.By default the values are formatted using generic number format.
+
+zmax
+Code: fig.update_traces(zmax=<VALUE>, selector=dict(type='contour'))
+Type: number
+Sets the upper bound of the color domain. Value should have the same units as in `z` and if set, `zmin` must be set as well.
+
+zmid
+Code: fig.update_traces(zmid=<VALUE>, selector=dict(type='contour'))
+Type: number
+Sets the mid-point of the color domain by scaling `zmin` and/or `zmax` to be equidistant to this point. Value should have the same units as in `z`. Has no effect when `zauto` is `False`.
+
+zmin
+Code: fig.update_traces(zmin=<VALUE>, selector=dict(type='contour'))
+Type: number
+Sets the lower bound of the color domain. Value should have the same units as in `z` and if set, `zmax` must be set as well.
+
+autocontour
+Code: fig.update_traces(autocontour=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Default: True
+Determines whether or not the contour level attributes are picked by an algorithm. If "True", the number of contour levels can be set in `ncontours`. If "False", set the contour level attributes in `contours`.
+
+connectgaps
+Code: fig.update_traces(connectgaps=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Determines whether or not gaps (i.e. {nan} or missing values) in the `z` data are filled in. It is defaulted to True if `z` is a one dimensional array otherwise it is defaulted to False.
+
+contours
+Code: fig.update_traces(contours=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+coloring
+Code: fig.update_traces(contours_coloring=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "fill" | "heatmap" | "lines" | "none" )
+Default: "fill"
+Determines the coloring method showing the contour values. If "fill", coloring is done evenly between each contour level If "heatmap", a heatmap gradient coloring is applied between each contour level. If "lines", coloring is done on the contour lines. If "none", no coloring is applied on this trace.
+
+end
+Code: fig.update_traces(contours_end=<VALUE>, selector=dict(type='contour'))
+Type: number
+Sets the end contour level value. Must be more than `contours.start`
+
+labelfont
+Code: fig.update_traces(contours_labelfont=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+Sets the font used for labeling the contour levels. The default color comes from the lines, if shown. The default family and size come from `layout.font`.
+
+color
+Code: fig.update_traces(contours_labelfont_color=<VALUE>, selector=dict(type='contour'))
+Type: color
+family
+Code: fig.update_traces(contours_labelfont_family=<VALUE>, selector=dict(type='contour'))
+Type: string
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(contours_labelfont_lineposition=<VALUE>, selector=dict(type='contour'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(contours_labelfont_shadow=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(contours_labelfont_size=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 1
+style
+Code: fig.update_traces(contours_labelfont_style=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(contours_labelfont_textcase=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(contours_labelfont_variant=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(contours_labelfont_weight=<VALUE>, selector=dict(type='contour'))
+Type: integer between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+labelformat
+Code: fig.update_traces(contours_labelformat=<VALUE>, selector=dict(type='contour'))
+Type: string
+Default: ""
+Sets the contour label formatting rule using d3 formatting mini-languages which are very similar to those in Python. For numbers, see: https://github.com/d3/d3-format/tree/v1.4.5#d3-format.
+
+operation
+Code: fig.update_traces(contours_operation=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "=" | "<" | ">=" | ">" | "<=" | "[]" | "()" | "[)" | "(]" | "][" | ")(" | "](" | ")[" )
+Default: "="
+Sets the constraint operation. "=" keeps regions equal to `value` "<" and "<=" keep regions less than `value` ">" and ">=" keep regions greater than `value` "[]", "()", "[)", and "(]" keep regions inside `value[0]` to `value[1]` "][", ")(", "](", ")[" keep regions outside `value[0]` to value[1]` Open vs. closed intervals make no difference to constraint display, but all versions are allowed for consistency with filter transforms.
+
+showlabels
+Code: fig.update_traces(contours_showlabels=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Determines whether to label the contour lines with their values.
+
+showlines
+Code: fig.update_traces(contours_showlines=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Default: True
+Determines whether or not the contour lines are drawn. Has an effect only if `contours.coloring` is set to "fill".
+
+size
+Code: fig.update_traces(contours_size=<VALUE>, selector=dict(type='contour'))
+Type: number greater than or equal to 0
+Sets the step between each contour level. Must be positive.
+
+start
+Code: fig.update_traces(contours_start=<VALUE>, selector=dict(type='contour'))
+Type: number
+Sets the starting contour level value. Must be less than `contours.end`
+
+type
+Code: fig.update_traces(contours_type=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "levels" | "constraint" )
+Default: "levels"
+If `levels`, the data is represented as a contour plot with multiple levels displayed. If `constraint`, the data is represented as constraints with the invalid region shaded as specified by the `operation` and `value` parameters.
+
+value
+Code: fig.update_traces(contours_value=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Default: 0
+Sets the value or values of the constraint boundary. When `operation` is set to one of the comparison values (=,<,>=,>,<=) "value" is expected to be a number. When `operation` is set to one of the interval values ([],(),[),(],][,)(,](,)[) "value" is expected to be an array of two numbers where the first is the lower bound and the second is the upper bound.
+
+fillcolor
+Code: fig.update_traces(fillcolor=<VALUE>, selector=dict(type='contour'))
+Type: color
+Sets the fill color if `contours.type` is "constraint". Defaults to a half-transparent variant of the line color, marker color, or marker line color, whichever is available.
+
+hoverlabel
+Code: fig.update_traces(hoverlabel=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+align
+Code: fig.update_traces(hoverlabel_align=<VALUE>, selector=dict(type='contour'))
+Type: enumerated or array of enumerateds , one of ( "left" | "right" | "auto" )
+Default: "auto"
+Sets the horizontal alignment of the text content within hover label box. Has an effect only if the hover label text spans more two or more lines
+
+bgcolor
+Code: fig.update_traces(hoverlabel_bgcolor=<VALUE>, selector=dict(type='contour'))
+Type: color or array of colors
+Sets the background color of the hover labels for this trace
+
+bordercolor
+Code: fig.update_traces(hoverlabel_bordercolor=<VALUE>, selector=dict(type='contour'))
+Type: color or array of colors
+Sets the border color of the hover labels for this trace.
+
+font
+Code: fig.update_traces(hoverlabel_font=dict(...), selector=dict(type='contour'))
+Type: dict containing one or more of the keys listed below.
+Sets the font used in hover labels.
+
+color
+Code: fig.update_traces(hoverlabel_font_color=<VALUE>, selector=dict(type='contour'))
+Type: color or array of colors
+family
+Code: fig.update_traces(hoverlabel_font_family=<VALUE>, selector=dict(type='contour'))
+Type: string or array of strings
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(hoverlabel_font_lineposition=<VALUE>, selector=dict(type='contour'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(hoverlabel_font_shadow=<VALUE>, selector=dict(type='contour'))
+Type: string or array of strings
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(hoverlabel_font_size=<VALUE>, selector=dict(type='contour'))
+Type: number or array of numbers greater than or equal to 1
+style
+Code: fig.update_traces(hoverlabel_font_style=<VALUE>, selector=dict(type='contour'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(hoverlabel_font_textcase=<VALUE>, selector=dict(type='contour'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(hoverlabel_font_variant=<VALUE>, selector=dict(type='contour'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(hoverlabel_font_weight=<VALUE>, selector=dict(type='contour'))
+Type: integer or array of integers between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+namelength
+Code: fig.update_traces(hoverlabel_namelength=<VALUE>, selector=dict(type='contour'))
+Type: integer or array of integers greater than or equal to -1
+Default: 15
+Sets the default length (in number of characters) of the trace name in the hover labels for all traces. -1 shows the whole name regardless of length. 0-3 shows the first 0-3 characters, and an integer >3 will show the whole name if it is less than that many characters, but if it is longer, will truncate to `namelength - 3` characters and add an ellipsis.
+
+hoverongaps
+Code: fig.update_traces(hoverongaps=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Default: True
+Determines whether or not gaps (i.e. {nan} or missing values) in the `z` data have hover labels associated with them.
+
+ncontours
+Code: fig.update_traces(ncontours=<VALUE>, selector=dict(type='contour'))
+Type: integer greater than or equal to 1
+Default: 15
+Sets the maximum number of contour levels. The actual number of contours will be chosen automatically to be less than or equal to the value of `ncontours`. Has an effect only if `autocontour` is "True" or if `contours.size` is missing.
+
+transpose
+Code: fig.update_traces(transpose=<VALUE>, selector=dict(type='contour'))
+Type: boolean
+Transposes the z data.
+
+xcalendar
+Code: fig.update_traces(xcalendar=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "chinese" | "coptic" | "discworld" | "ethiopian" | "gregorian" | "hebrew" | "islamic" | "jalali" | "julian" | "mayan" | "nanakshahi" | "nepali" | "persian" | "taiwan" | "thai" | "ummalqura" )
+Default: "gregorian"
+Sets the calendar system to use with `x` date data.
+
+ycalendar
+Code: fig.update_traces(ycalendar=<VALUE>, selector=dict(type='contour'))
+Type: enumerated , one of ( "chinese" | "coptic" | "discworld" | "ethiopian" | "gregorian" | "hebrew" | "islamic" | "jalali" | "julian" | "mayan" | "nanakshahi" | "nepali" | "persian" | "taiwan" | "thai" | "ummalqura" )
+Default: "gregorian"
+Sets the calendar system to use with `y` date data.
+
+uirevision
+Code: fig.update_traces(uirevision=<VALUE>, selector=dict(type='contour'))
+Type: number or categorical coordinate string
+Controls persistence of some user-driven changes to the trace: `constraintrange` in `parcoords` traces, as well as some `editable: True` modifications such as `name` and `colorbar.title`. Defaults to `layout.uirevision`. Note that other user-driven trace attribute changes are controlled by `layout` attributes: `trace.visible` is controlled by `layout.legend.uirevision`, `selectedpoints` is controlled by `layout.selectionrevision`, and `colorbar.(x|y)` (accessible with `config: {editable: True}`) is controlled by `layout.editrevision`. Trace changes are tracked by `uid`, which only falls back on trace index if no `uid` is provided. So if your app can add/remove traces before the end of the `data` array, such that the same trace has a different index, you can still preserve user-driven changes if you give each trace a `uid` that stays with it as it moves.

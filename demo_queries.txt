@@ -1,0 +1,7 @@
+table overview
+
+show me all members of parliament ordered by their presence in votes
+1 - yes, total number, 2 - abstained, 3 - for all meetings held in 2022
+also add political party
+
+show me only political parties by the total number of votes
