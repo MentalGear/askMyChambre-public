@@ -1,0 +1,96 @@
+Overview
+The plotly Python library is an interactive, open-source plotting library that supports over 40 unique chart types covering a wide range of statistical, financial, geographic, scientific, and 3-dimensional use-cases.
+
+Built on top of the Plotly JavaScript library (plotly.js), plotly enables Python users to create beautiful interactive web-based visualizations that can be displayed in Jupyter notebooks, saved to standalone HTML files, or served as part of pure Python-built web applications using Dash. The plotly Python library is sometimes referred to as "plotly.py" to differentiate it from the JavaScript library.
+
+Thanks to deep integration with our Kaleido image export utility, plotly also provides great support for non-web contexts including desktop editors (e.g. QtConsole, Spyder, PyCharm) and static document publishing (e.g. exporting notebooks to PDF with high-quality vector images).
+
+This Getting Started guide explains how to install plotly and related optional pages. Once you've installed, you can use our documentation in three main ways:
+
+You jump right in to examples of how to make basic charts, statistical charts, scientific charts, financial charts, maps, and 3-dimensional charts.
+If you prefer to learn about the fundamentals of the library first, you can read about the structure of figures, how to create and update figures, how to display figures, how to theme figures with templates, how to export figures to various formats and about Plotly Express, the high-level API for doing all of the above.
+You can check out our exhaustive reference guides: the Python API reference or the Figure Reference
+For information on using Python to build web applications containing plotly figures, see the Dash User Guide.
+
+We also encourage you to join the Plotly Community Forum if you want help with anything related to plotly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What About Dash?
+Dash is an open-source framework for building analytical applications, with no Javascript required, and it is tightly integrated with the Plotly graphing library.
+
+Learn about how to install Dash at https://dash.plot.ly/installation.
+
+Everywhere in this page that you see fig.show(), you can display the same figure in a Dash application by passing it to the figure argument of the Graph component from the built-in dash_core_components package like this:
+
+import plotly.graph_objects as go # or plotly.express as px
+fig = go.Figure() # or any Plotly Express function e.g. px.bar(...)
+# fig.add_trace( ... )
+# fig.update_layout( ... )
+
+from dash import Dash, dcc, html
+
+app = Dash()
+app.layout = html.Div([
+    dcc.Graph(figure=fig)
+])
+
+app.run(debug=True, use_reloader=False)  # Turn off reloader if inside Jupyter
+
+from dash import Dash, dcc, html, Input, Output
+import plotly.graph_objects as go
+
+app = Dash(__name__)
+
+
+app.layout = html.Div([
+    html.H4('Interactive color selection with simple Dash example'),
+    html.P("Select color:"),
+    dcc.Dropdown(
+        id="dropdown",
+        options=['Gold', 'MediumTurquoise', 'LightGreen'],
+        value='Gold',
+        clearable=False,
+    ),
+    dcc.Graph(id="graph"),
+])
+
+
+@app.callback(
+    Output("graph", "figure"),
+    Input("dropdown", "value"))
+def display_color(color):
+    fig = go.Figure(
+        data=go.Bar(y=[2, 3, 1], # replace with your own data source
+                    marker_color=color))
+    return fig
+
+
+app.run(debug=True)

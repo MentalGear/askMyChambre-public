@@ -1,109 +1,178 @@
 <script lang="ts">
-    import type { ResultData } from '../../routes/ResultType'
+	import { onMount } from 'svelte';
+	import type { ResultData } from '../../routes/ResultType';
 
-    import TopBar from './TopBar.svelte'
+	// State to track if our dynamic, client-side modules have loaded
+	let componentsLoaded = $state(false);
+	let componentLoadError = $state<string | null>(null);
 
-    import * as Table from '$lib/shadcn_ui/components/ui/table'
+	// These will hold the component definitions once loaded
+	let Table: any, TableIcon: any;
+	let Plotly: any;
 
-    import { Switch } from '$lib/shadcn_ui/components/ui/switch'
-    import { Label } from '$lib/shadcn_ui/components/ui/label'
+	// Props
+	let {
+		results,
+		display = 'table' // Default to showing the table
+	}: {
+		results: (ResultData & { plotSpec?: any }) | null;
+		display?: 'table' | 'plot';
+	} = $props();
 
-    let { results }: { results: ResultData } = $props()
+	// --- REFACTORED onMount ---
+	// This function is now much simpler and more robust.
+	onMount(async () => {
+		try {
+			// This instance will ONLY load components needed for the table view.
+			if (display === 'table') {
+				Table = (await import('$lib/shadcn_ui/components/ui/table'));
+				TableIcon = (await import('lucide-svelte/icons/table-2')).default;
+			}
 
-    let showSqlPath = $state(false)
-    let showStartMessage = $state(false)
+			// This instance will ONLY load the Plotly library.
+			if (display === 'plot') {
+				Plotly = (await import('plotly.js-dist-min')).default;
+			}
 
-    $effect(() => {
-        if (!showStartMessage && results?.queryResult) {
-            // switch
-            showStartMessage = true
-        }
-    })
+			// --- Success ---
+			// Mark components as loaded so the UI can render.
+			componentsLoaded = true;
+		} catch (e: any) {
+			console.error(`Failed to load components for display='${display}':`, e);
+			componentLoadError = e.message;
+		}
+	});
 
-    $inspect(results)
+	let plotContainer: HTMLDivElement;
+
+	$effect(() => {
+		if (componentsLoaded && display === 'plot' && results?.plotSpec && plotContainer) {
+			Plotly.react(
+				plotContainer,
+				results.plotSpec.data,
+				{
+					...results.plotSpec.layout,
+					autosize: true,
+					paper_bgcolor: 'rgba(0,0,0,0)',
+					plot_bgcolor: 'rgba(0,0,0,0)',
+					font: {
+						color: document.documentElement.classList.contains('dark') ? '#e5e7eb' : '#374151'
+					}
+				},
+				{ responsive: true }
+			);
+		}
+	});
 </script>
 
-<div class="h-full overflow-y-auto">
-    <TopBar>
-        <div class="flex place-content-between place-items-center">
-            <h2>Results</h2>
-            <div class="flex items-center gap-2">
-                <Label for="show-sql">Edit Query</Label>
-                <Switch id="show-sql" disabled bind:checked={showSqlPath} />
-            </div>
-        </div>
-    </TopBar>
+<!-- This is a component-level style block -->
+<style>
+	@keyframes progress-animation {
+		from {
+			width: 0%;
+		}
+		to {
+			width: 100%;
+		}
+	}
+	.progress-bar-inner {
+		/* Apply the animation here */
+		animation: progress-animation 15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+	}
+</style>
 
-    <div class="mainContent flex flex-col place-content-center place-items-center">
-        {#if showSqlPath && results?.sqlQuery}
-            <div class="sql-query mb-4">
-                <h3>SQL Query:</h3>
-                {#each results.sqlQuery as query}
-                    <pre class="rounded p-2">{query}</pre>
-                {/each}
-            </div>
-        {/if}
+{#if !componentsLoaded}
+	{#if display === 'plot'}
+		<div class="flex h-full w-full flex-col items-center justify-center p-4">
+			<div class="w-full max-w-xs">
+				<div class="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+					<!-- The progress bar now uses a CSS class for its animation -->
+					<div class="bg-blue-600 h-2 rounded-full progress-bar-inner"></div>
+				</div>
+				<p class="text-sm text-center text-muted-foreground mt-3">
+					Initializing visualization engine...
+				</p>
+			</div>
+			{#if componentLoadError}<div
+					class="mt-4 text-red-500 text-xs text-center p-2 bg-red-100 dark:bg-red-900/20 rounded-md"
+				>
+					<strong>Error:</strong><br />{componentLoadError}
+				</div>{/if}
+		</div>
+	{:else}
+		<div class="flex h-full w-full items-center justify-center">
+			<p class="text-muted-foreground animate-pulse">Loading...</p>
+		</div>
+	{/if}
+{:else}
+	<div class="flex flex-col h-full">
+		<!-- SECTION 1: View for the Table Panel -->
+		{#if display === 'table'}
+			<div class="mainContent p-4 md:p-6 space-y-6 overflow-y-auto flex-1">
+				{#if results?.queryError}
+					<div
+						class="error-message rounded-lg bg-red-100 p-4 text-red-700 dark:bg-red-900/30 dark:text-red-300"
+					>
+						<h3 class="font-bold">Query Error:</h3>
+						<p>{results.queryError}</p>
+						{#if results.sqlQuery}<pre
+								class="bg-red-200 dark:bg-red-800/50 rounded p-3 text-sm mt-4"
+							>{results.sqlQuery[0]}</pre>{/if}
+					</div>
+				{:else if results?.queryResult}
+					{#if results.queryResult.length > 0}
+						<div class="bg-background border rounded-lg">
+							<div class="p-4"><h3 class="font-semibold text-lg">Data Table</h3></div>
+							<div class="data-table rounded-b-lg border-t">
+								<Table.Root>
+									<Table.Header
+										><Table.Row>
+											{#each Object.keys(results.queryResult[0]) as key}<Table.Head
+													>{key}</Table.Head
+												>{/each}
+										</Table.Row></Table.Header
+									>
+									<Table.Body>
+										{#each results.queryResult as row}<Table.Row>
+												{#each Object.values(row) as value}<Table.Cell
+														>{value}</Table.Cell
+													>{/each}
+											</Table.Row>{/each}
+									</Table.Body>
+								</Table.Root>
+							</div>
+						</div>
+					{:else}
+						<p class="text-center text-gray-500 pt-10">The query returned no data.</p>
+					{/if}
+				{:else}
+					<div class="flex h-full items-center justify-center">
+						<div
+							class="bg-background mx-auto flex max-w-md flex-col gap-2 rounded-lg border p-10 text-center"
+						>
+							<svelte:component this={TableIcon} class="h-12 w-12 mx-auto text-muted-foreground" />
+							<h2 class="text-lg font-semibold mt-4">Results Panel</h2>
+							<p class="text-sm text-muted-foreground">
+								Ask a question about your data to see the results here.
+							</p>
+						</div>
+					</div>
+				{/if}
+			</div>
+		{/if}
 
-        {#if results?.queryError}
-            <div class="error-message m-10 rounded-lg bg-red-100 p-4 text-red-700">
-                <h3 class="font-bold">Error:</h3>
-                <p>{results.queryError}</p>
-            </div>
-        {:else if results?.queryResult}
-            <div class="data-table bg-accent m-10 rounded-lg border">
-                {#if results.queryResult.length > 0}
-                    <Table.Root>
-                        <Table.Header>
-                            <Table.Row>
-                                {#each Object.keys(results.queryResult[0]) as key}
-                                    <Table.Head>{key}</Table.Head>
-                                {/each}
-                            </Table.Row>
-                        </Table.Header>
-                        <Table.Body>
-                            {#each results.queryResult as row}
-                                <Table.Row>
-                                    {#each Object.values(row) as value}
-                                        <Table.Cell>{value}</Table.Cell>
-                                    {/each}
-                                </Table.Row>
-                            {/each}
-                        </Table.Body>
-                    </Table.Root>
-                {:else}
-                    <p>No data found for this query.</p>
-                {/if}
-            </div>
-        {/if}
-
-        {#if !showStartMessage}
-            <div
-                class="bg-background m-10 mx-auto flex max-w-md flex-col gap-2 rounded-lg border p-10 text-center opacity-50"
-            >
-                <h1 class="mb-2 text-xl font-semibold">Good To Know</h1>
-                <ul class="flex flex-col gap-2 text-center">
-                    <!-- <li class="text-md">
-                        Our method applies <b>no</b> AI processing on the actual data to prevent any
-                        hallucination risks.
-                    </li> -->
-                    <!-- <li class="text-md">
-                        Our method <b>does not apply</b> AI processing on the actual data.
-                    </li> -->
-                    <li class="text-md">
-                        To ensure all presented data is authentic and without risk of hallucination,
-                        our method <b>does not apply</b> AI processing on the actual data.
-                    </li>
-
-                    <li class="text-md italic">
-                        However always consider checking the AI-generated query if the displayed
-                        data appears inconsistent with your search intention.
-                    </li>
-                    <!-- <li class="text-md italic">
-                        However if the displayed data appears inconsistent with your intented
-                        search, consider reviewing the AI-generated query.
-                    </li> -->
-                </ul>
-            </div>
-        {/if}
-    </div>
-</div>
+		<!-- SECTION 2: View for the Plot Panel -->
+		{#if display === 'plot'}
+			{#if results?.plotSpec}
+				<div class="p-4 h-full flex flex-col">
+					<h3 class="font-semibold text-lg mb-4">{results.plotSpec.layout.title.text || 'Chart'}</h3>
+					<div bind:this={plotContainer} class="w-full flex-1 min-h-0"></div>
+				</div>
+			{:else}
+				<div class="flex h-full w-full items-center justify-center">
+					<p class="text-muted-foreground">No plot available for this data.</p>
+				</div>
+			{/if}
+		{/if}
+	</div>
+{/if}

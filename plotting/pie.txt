@@ -1,0 +1,641 @@
+Python Figure Reference: pie Traces
+A plotly.graph_objects.Pie trace is a graph object in the figure's data list with any of the named arguments or attributes listed below.
+
+A data visualized by the sectors of the pie is set in `values`. The sector labels are set in `labels`. The sector colors are set in `marker.colors`
+
+name
+Code: fig.update_traces(name=<VALUE>, selector=dict(type='pie'))
+Type: string
+Sets the trace name. The trace name appears as the legend item and on hover.
+
+title
+Code: fig.update_traces(title=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+font
+Code: fig.update_traces(title_font=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+Sets the font used for `title`.
+
+color
+Code: fig.update_traces(title_font_color=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+family
+Code: fig.update_traces(title_font_family=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(title_font_lineposition=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(title_font_shadow=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(title_font_size=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers greater than or equal to 1
+style
+Code: fig.update_traces(title_font_style=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(title_font_textcase=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(title_font_variant=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(title_font_weight=<VALUE>, selector=dict(type='pie'))
+Type: integer or array of integers between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+position
+Code: fig.update_traces(title_position=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( "top left" | "top center" | "top right" | "middle center" | "bottom left" | "bottom center" | "bottom right" )
+Specifies the location of the `title`.
+
+text
+Code: fig.update_traces(title_text=<VALUE>, selector=dict(type='pie'))
+Type: string
+Default: ""
+Sets the title of the chart. If it is empty, no title is displayed.
+
+visible
+Code: fig.update_traces(visible=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( True | False | "legendonly" )
+Default: True
+Determines whether or not this trace is visible. If "legendonly", the trace is not drawn, but can appear as a legend item (provided that the legend itself is visible).
+
+showlegend
+Code: fig.update_traces(showlegend=<VALUE>, selector=dict(type='pie'))
+Type: boolean
+Default: True
+Determines whether or not an item corresponding to this trace is shown in the legend.
+
+legend
+Code: fig.update_traces(legend=<VALUE>, selector=dict(type='pie'))
+Type: subplotid
+Default: legend
+Sets the reference to a legend to show this trace in. References to these legends are "legend", "legend2", "legend3", etc. Settings for these legends are set in the layout, under `layout.legend`, `layout.legend2`, etc.
+
+legendrank
+Code: fig.update_traces(legendrank=<VALUE>, selector=dict(type='pie'))
+Type: number
+Default: 1000
+Sets the legend rank for this trace. Items and groups with smaller ranks are presented on top/left side while with "reversed" `legend.traceorder` they are on bottom/right side. The default legendrank is 1000, so that you can use ranks less than 1000 to place certain items before all unranked items, and ranks greater than 1000 to go after all unranked items. When having unranked or equal rank items shapes would be displayed after traces i.e. according to their order in data and layout.
+
+legendgroup
+Code: fig.update_traces(legendgroup=<VALUE>, selector=dict(type='pie'))
+Type: string
+Default: ""
+Sets the legend group for this trace. Traces and shapes part of the same legend group hide/show at the same time when toggling legend items.
+
+legendgrouptitle
+Code: fig.update_traces(legendgrouptitle=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+font
+Code: fig.update_traces(legendgrouptitle_font=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+Sets this legend group's title font.
+
+color
+Code: fig.update_traces(legendgrouptitle_font_color=<VALUE>, selector=dict(type='pie'))
+Type: color
+family
+Code: fig.update_traces(legendgrouptitle_font_family=<VALUE>, selector=dict(type='pie'))
+Type: string
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(legendgrouptitle_font_lineposition=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(legendgrouptitle_font_shadow=<VALUE>, selector=dict(type='pie'))
+Type: string
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(legendgrouptitle_font_size=<VALUE>, selector=dict(type='pie'))
+Type: number greater than or equal to 1
+style
+Code: fig.update_traces(legendgrouptitle_font_style=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(legendgrouptitle_font_textcase=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(legendgrouptitle_font_variant=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(legendgrouptitle_font_weight=<VALUE>, selector=dict(type='pie'))
+Type: integer between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+text
+Code: fig.update_traces(legendgrouptitle_text=<VALUE>, selector=dict(type='pie'))
+Type: string
+Default: ""
+Sets the title of the legend group.
+
+legendwidth
+Code: fig.update_traces(legendwidth=<VALUE>, selector=dict(type='pie'))
+Type: number greater than or equal to 0
+Sets the width (in px or fraction) of the legend for this trace.
+
+opacity
+Code: fig.update_traces(opacity=<VALUE>, selector=dict(type='pie'))
+Type: number between or equal to 0 and 1
+Default: 1
+Sets the opacity of the trace.
+
+ids
+Code: fig.update_traces(ids=<VALUE>, selector=dict(type='pie'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Assigns id labels to each datum. These ids for object constancy of data points during animation. Should be an array of strings, not numbers or any other type.
+
+values
+Code: fig.update_traces(values=<VALUE>, selector=dict(type='pie'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the values of the sectors. If omitted, we count occurrences of each label.
+
+labels
+Code: fig.update_traces(labels=<VALUE>, selector=dict(type='pie'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the sector labels. If `labels` entries are duplicated, we sum associated `values` or simply count occurrences if `values` is not provided. For other array attributes (including color) we use the first non-empty entry among all occurrences of the label.
+
+dlabel
+Code: fig.update_traces(dlabel=<VALUE>, selector=dict(type='pie'))
+Type: number
+Default: 1
+Sets the label step. See `label0` for more info.
+
+label0
+Code: fig.update_traces(label0=<VALUE>, selector=dict(type='pie'))
+Type: number
+Default: 0
+Alternate to `labels`. Builds a numeric set of labels. Use with `dlabel` where `label0` is the starting label and `dlabel` the step.
+
+pull
+Code: fig.update_traces(pull=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers between or equal to 0 and 1
+Default: 0
+Sets the fraction of larger radius to pull the sectors out from the center. This can be a constant to pull all slices apart from each other equally or an array to highlight one or more slices.
+
+text
+Code: fig.update_traces(text=<VALUE>, selector=dict(type='pie'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets text elements associated with each sector. If trace `textinfo` contains a "text" flag, these elements will be seen on the chart. If trace `hoverinfo` contains a "text" flag and "hovertext" is not set, these elements will be seen in the hover labels.
+
+textposition
+Code: fig.update_traces(textposition=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "inside" | "outside" | "auto" | "none" )
+Default: "auto"
+Specifies the location of the `textinfo`.
+
+texttemplate
+Code: fig.update_traces(texttemplate=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: ""
+Template string used for rendering the information text that appear on points. Note that this will override `textinfo`. Variables are inserted using %{variable}, for example "y: %{y}". Numbers are formatted using d3-format's syntax %{variable:d3-format}, for example "Price: %{y:$.2f}". https://github.com/d3/d3-format/tree/v1.4.5#d3-format for details on the formatting syntax. Dates are formatted using d3-time-format's syntax %{variable|d3-time-format}, for example "Day: %{2019-01-01|%A}". https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format for details on the date formatting syntax. Every attributes that can be specified per-point (the ones that are `arrayOk: True`) are available. Finally, the template string has access to variables `label`, `color`, `value`, `percent` and `text`.
+
+hovertext
+Code: fig.update_traces(hovertext=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: ""
+Sets hover text elements associated with each sector. If a single string, the same string appears for all data points. If an array of string, the items are mapped in order of this trace's sectors. To be seen, trace `hoverinfo` must contain a "text" flag.
+
+hoverinfo
+Code: fig.update_traces(hoverinfo=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "label", "text", "value", "percent", "name" joined with a "+" OR "all" or "none" or "skip".
+Examples: "label", "text", "label+text", "label+text+value", "all"
+Default: "all"
+Determines which trace information appear on hover. If `none` or `skip` are set, no information is displayed upon hovering. But, if `none` is set, click and hover events are still fired.
+
+hovertemplate
+Code: fig.update_traces(hovertemplate=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: ""
+Template string used for rendering the information that appear on hover box. Note that this will override `hoverinfo`. Variables are inserted using %{variable}, for example "y: %{y}" as well as %{xother}, {%_xother}, {%_xother_}, {%xother_}. When showing info for several points, "xother" will be added to those with different x positions from the first point. An underscore before or after "(x|y)other" will add a space on that side, only when this field is shown. Numbers are formatted using d3-format's syntax %{variable:d3-format}, for example "Price: %{y:$.2f}". https://github.com/d3/d3-format/tree/v1.4.5#d3-format for details on the formatting syntax. Dates are formatted using d3-time-format's syntax %{variable|d3-time-format}, for example "Day: %{2019-01-01|%A}". https://github.com/d3/d3-time-format/tree/v2.2.3#locale_format for details on the date formatting syntax. The variables available in `hovertemplate` are the ones emitted as event data described at this link https://plotly.com/javascript/plotlyjs-events/#event-data. Additionally, every attributes that can be specified per-point (the ones that are `arrayOk: True`) are available. Finally, the template string has access to variables `label`, `color`, `value`, `percent` and `text`. Anything contained in tag `<extra>` is displayed in the secondary box, for example "<extra>{fullData.name}</extra>". To hide the secondary box completely, use an empty tag `<extra></extra>`.
+
+meta
+Code: fig.update_traces(meta=<VALUE>, selector=dict(type='pie'))
+Type: number or categorical coordinate string
+Assigns extra meta information associated with this trace that can be used in various text attributes. Attributes such as trace `name`, graph, axis and colorbar `title.text`, annotation `text` `rangeselector`, `updatemenues` and `sliders` `label` text all support `meta`. To access the trace `meta` values in an attribute in the same trace, simply use `%{meta[i]}` where `i` is the index or key of the `meta` item in question. To access trace `meta` in layout attributes, use `%{data[n[.meta[i]}` where `i` is the index or key of the `meta` and `n` is the trace index.
+
+customdata
+Code: fig.update_traces(customdata=<VALUE>, selector=dict(type='pie'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Assigns extra data each datum. This may be useful when listening to hover, click and selection events. Note that, "scatter" traces also appends customdata items in the markers DOM elements
+
+domain
+Code: fig.update_traces(domain=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+column
+Code: fig.update_traces(domain_column=<VALUE>, selector=dict(type='pie'))
+Type: integer greater than or equal to 0
+Default: 0
+If there is a layout grid, use the domain for this column in the grid for this pie trace .
+
+row
+Code: fig.update_traces(domain_row=<VALUE>, selector=dict(type='pie'))
+Type: integer greater than or equal to 0
+Default: 0
+If there is a layout grid, use the domain for this row in the grid for this pie trace .
+
+x
+Code: fig.update_traces(domain_x=list(...), selector=dict(type='pie'))
+Type: list
+Default: [0, 1]
+Sets the horizontal domain of this pie trace (in plot fraction).
+
+y
+Code: fig.update_traces(domain_y=list(...), selector=dict(type='pie'))
+Type: list
+Default: [0, 1]
+Sets the vertical domain of this pie trace (in plot fraction).
+
+automargin
+Code: fig.update_traces(automargin=<VALUE>, selector=dict(type='pie'))
+Type: boolean
+Determines whether outside text labels can push the margins.
+
+marker
+Code: fig.update_traces(marker=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+colors
+Code: fig.update_traces(marker_colors=<VALUE>, selector=dict(type='pie'))
+Type: list, numpy array, or Pandas series of numbers, strings, or datetimes.
+Sets the color of each sector. If not specified, the default trace color set is used to pick the sector colors.
+
+line
+Code: fig.update_traces(marker_line=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+color
+Code: fig.update_traces(marker_line_color=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+Default: "#444"
+Sets the color of the line enclosing each sector.
+
+width
+Code: fig.update_traces(marker_line_width=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers greater than or equal to 0
+Default: 0
+Sets the width (in px) of the line enclosing each sector.
+
+pattern
+Code: fig.update_traces(marker_pattern=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+Sets the pattern within the marker.
+
+bgcolor
+Code: fig.update_traces(marker_pattern_bgcolor=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+When there is no colorscale sets the color of background pattern fill. Defaults to a `marker.color` background when `fillmode` is "overlay". Otherwise, defaults to a transparent background.
+
+fgcolor
+Code: fig.update_traces(marker_pattern_fgcolor=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+When there is no colorscale sets the color of foreground pattern fill. Defaults to a `marker.color` background when `fillmode` is "replace". Otherwise, defaults to dark grey or white to increase contrast with the `bgcolor`.
+
+fgopacity
+Code: fig.update_traces(marker_pattern_fgopacity=<VALUE>, selector=dict(type='pie'))
+Type: number between or equal to 0 and 1
+Sets the opacity of the foreground pattern fill. Defaults to a 0.5 when `fillmode` is "overlay". Otherwise, defaults to 1.
+
+fillmode
+Code: fig.update_traces(marker_pattern_fillmode=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( "replace" | "overlay" )
+Default: "replace"
+Determines whether `marker.color` should be used as a default to `bgcolor` or a `fgcolor`.
+
+shape
+Code: fig.update_traces(marker_pattern_shape=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "" | "/" | "\" | "x" | "-" | "|" | "+" | "." )
+Default: ""
+Sets the shape of the pattern fill. By default, no pattern is used for filling the area.
+
+size
+Code: fig.update_traces(marker_pattern_size=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers greater than or equal to 0
+Default: 8
+Sets the size of unit squares of the pattern fill in pixels, which corresponds to the interval of repetition of the pattern.
+
+solidity
+Code: fig.update_traces(marker_pattern_solidity=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers between or equal to 0 and 1
+Default: 0.3
+Sets the solidity of the pattern fill. Solidity is roughly the fraction of the area filled by the pattern. Solidity of 0 shows only the background color without pattern and solidty of 1 shows only the foreground color without pattern.
+
+textfont
+Code: fig.update_traces(textfont=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+Sets the font used for `textinfo`.
+
+color
+Code: fig.update_traces(textfont_color=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+family
+Code: fig.update_traces(textfont_family=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(textfont_lineposition=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(textfont_shadow=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(textfont_size=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers greater than or equal to 1
+style
+Code: fig.update_traces(textfont_style=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(textfont_textcase=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(textfont_variant=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(textfont_weight=<VALUE>, selector=dict(type='pie'))
+Type: integer or array of integers between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+textinfo
+Code: fig.update_traces(textinfo=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "label", "text", "value", "percent" joined with a "+" OR "none".
+Examples: "label", "text", "label+text", "label+text+value", "none"
+Determines which trace information appear on the graph.
+
+direction
+Code: fig.update_traces(direction=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( "clockwise" | "counterclockwise" )
+Default: "counterclockwise"
+Specifies the direction at which succeeding sectors follow one another.
+
+hole
+Code: fig.update_traces(hole=<VALUE>, selector=dict(type='pie'))
+Type: number between or equal to 0 and 1
+Default: 0
+Sets the fraction of the radius to cut out of the pie. Use this to make a donut chart.
+
+hoverlabel
+Code: fig.update_traces(hoverlabel=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+align
+Code: fig.update_traces(hoverlabel_align=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "left" | "right" | "auto" )
+Default: "auto"
+Sets the horizontal alignment of the text content within hover label box. Has an effect only if the hover label text spans more two or more lines
+
+bgcolor
+Code: fig.update_traces(hoverlabel_bgcolor=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+Sets the background color of the hover labels for this trace
+
+bordercolor
+Code: fig.update_traces(hoverlabel_bordercolor=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+Sets the border color of the hover labels for this trace.
+
+font
+Code: fig.update_traces(hoverlabel_font=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+Sets the font used in hover labels.
+
+color
+Code: fig.update_traces(hoverlabel_font_color=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+family
+Code: fig.update_traces(hoverlabel_font_family=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(hoverlabel_font_lineposition=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(hoverlabel_font_shadow=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(hoverlabel_font_size=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers greater than or equal to 1
+style
+Code: fig.update_traces(hoverlabel_font_style=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(hoverlabel_font_textcase=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(hoverlabel_font_variant=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(hoverlabel_font_weight=<VALUE>, selector=dict(type='pie'))
+Type: integer or array of integers between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+namelength
+Code: fig.update_traces(hoverlabel_namelength=<VALUE>, selector=dict(type='pie'))
+Type: integer or array of integers greater than or equal to -1
+Default: 15
+Sets the default length (in number of characters) of the trace name in the hover labels for all traces. -1 shows the whole name regardless of length. 0-3 shows the first 0-3 characters, and an integer >3 will show the whole name if it is less than that many characters, but if it is longer, will truncate to `namelength - 3` characters and add an ellipsis.
+
+insidetextfont
+Code: fig.update_traces(insidetextfont=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+Sets the font used for `textinfo` lying inside the sector.
+
+color
+Code: fig.update_traces(insidetextfont_color=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+family
+Code: fig.update_traces(insidetextfont_family=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(insidetextfont_lineposition=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(insidetextfont_shadow=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(insidetextfont_size=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers greater than or equal to 1
+style
+Code: fig.update_traces(insidetextfont_style=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(insidetextfont_textcase=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(insidetextfont_variant=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(insidetextfont_weight=<VALUE>, selector=dict(type='pie'))
+Type: integer or array of integers between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+insidetextorientation
+Code: fig.update_traces(insidetextorientation=<VALUE>, selector=dict(type='pie'))
+Type: enumerated , one of ( "horizontal" | "radial" | "tangential" | "auto" )
+Default: "auto"
+Controls the orientation of the text inside chart sectors. When set to "auto", text may be oriented in any direction in order to be as big as possible in the middle of a sector. The "horizontal" option orients text to be parallel with the bottom of the chart, and may make text smaller in order to achieve that goal. The "radial" option orients text along the radius of the sector. The "tangential" option orients text perpendicular to the radius of the sector.
+
+outsidetextfont
+Code: fig.update_traces(outsidetextfont=dict(...), selector=dict(type='pie'))
+Type: dict containing one or more of the keys listed below.
+Sets the font used for `textinfo` lying outside the sector.
+
+color
+Code: fig.update_traces(outsidetextfont_color=<VALUE>, selector=dict(type='pie'))
+Type: color or array of colors
+family
+Code: fig.update_traces(outsidetextfont_family=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+HTML font family - the typeface that will be applied by the web browser. The web browser will only be able to apply a font if it is available on the system which it operates. Provide multiple font families, separated by commas, to indicate the preference in which to apply fonts if they aren't available on the system. The Chart Studio Cloud (at https://chart-studio.plotly.com or on-premise) generates images on a server, where only a select number of fonts are installed and supported. These include "Arial", "Balto", "Courier New", "Droid Sans", "Droid Serif", "Droid Sans Mono", "Gravitas One", "Old Standard TT", "Open Sans", "Overpass", "PT Sans Narrow", "Raleway", "Times New Roman".
+
+lineposition
+Code: fig.update_traces(outsidetextfont_lineposition=<VALUE>, selector=dict(type='pie'))
+Type: flaglist string. Any combination of "under", "over", "through" joined with a "+" OR "none".
+Examples: "under", "over", "under+over", "under+over+through", "none"
+Default: "none"
+Sets the kind of decoration line(s) with text, such as an "under", "over" or "through" as well as combinations e.g. "under+over", etc.
+
+shadow
+Code: fig.update_traces(outsidetextfont_shadow=<VALUE>, selector=dict(type='pie'))
+Type: string or array of strings
+Default: "none"
+Sets the shape and color of the shadow behind text. "auto" places minimal shadow and applies contrast text font color. See https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow for additional options.
+
+size
+Code: fig.update_traces(outsidetextfont_size=<VALUE>, selector=dict(type='pie'))
+Type: number or array of numbers greater than or equal to 1
+style
+Code: fig.update_traces(outsidetextfont_style=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "italic" )
+Default: "normal"
+Sets whether a font should be styled with a normal or italic face from its family.
+
+textcase
+Code: fig.update_traces(outsidetextfont_textcase=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "word caps" | "upper" | "lower" )
+Default: "normal"
+Sets capitalization of text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+variant
+Code: fig.update_traces(outsidetextfont_variant=<VALUE>, selector=dict(type='pie'))
+Type: enumerated or array of enumerateds , one of ( "normal" | "small-caps" | "all-small-caps" | "all-petite-caps" | "petite-caps" | "unicase" )
+Default: "normal"
+Sets the variant of the font.
+
+weight
+Code: fig.update_traces(outsidetextfont_weight=<VALUE>, selector=dict(type='pie'))
+Type: integer or array of integers between or equal to 1 and 1000
+Default: normal
+Sets the weight (or boldness) of the font.
+
+rotation
+Code: fig.update_traces(rotation=<VALUE>, selector=dict(type='pie'))
+Type: angle
+Default: 0
+Instead of the first slice starting at 12 o'clock, rotate to some other angle.
+
+scalegroup
+Code: fig.update_traces(scalegroup=<VALUE>, selector=dict(type='pie'))
+Type: string
+Default: ""
+If there are multiple pie charts that should be sized according to their totals, link them by providing a non-empty group id here shared by every trace in the same group.
+
+sort
+Code: fig.update_traces(sort=<VALUE>, selector=dict(type='pie'))
+Type: boolean
+Default: True
+Determines whether or not the sectors are reordered from largest to smallest.
+
+uirevision
+Code: fig.update_traces(uirevision=<VALUE>, selector=dict(type='pie'))
+Type: number or categorical coordinate string
+Controls persistence of some user-driven changes to the trace: `constraintrange` in `parcoords` traces, as well as some `editable: True` modifications such as `name` and `colorbar.title`. Defaults to `layout.uirevision`. Note that other user-driven trace attribute changes are controlled by `layout` attributes: `trace.visible` is controlled by `layout.legend.uirevision`, `selectedpoints` is controlled by `layout.selectionrevision`, and `colorbar.(x|y)` (accessible with `config: {editable: True}`) is controlled by `layout.editrevision`. Trace changes are tracked by `uid`, which only falls back on trace index if no `uid` is provided. So if your app can add/remove traces before the end of the `data` array, such that the same trace has a different index, you can still preserve user-driven changes if you give each trace a `uid` that stays with it as it moves.

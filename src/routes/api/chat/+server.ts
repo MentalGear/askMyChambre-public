@@ -73,10 +73,7 @@ export async function POST({ request, fetch: eventFetch, url }) {
         model: providerSession('gemini-2.0-flash'),
         messages,
     })
-    // debugger
-    // console.log('streaming res', result.toTextStreamResponse())
-    // console.log('streaming text', await result.toTextStreamResponse().text())
-
+    
     return result.toDataStreamResponse()
 
     // return result.toTextStreamResponse()
